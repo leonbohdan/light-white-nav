@@ -1,0 +1,16 @@
+.header {
+  background-color: $bgc-nav-color;
+  height: $desktop-nav-height;
+
+  &__container {
+    @include wide-screen;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $desktop-nav-height;
+    margin: 0 20px;
+  }
+}

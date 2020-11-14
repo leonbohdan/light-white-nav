@@ -4,3 +4,31 @@
     #{$_property}: $_toValue;
   }
 }
+
+@mixin burger-item {
+  background-color: $c-text;
+  height: 2px;
+  width: 20px;
+  border-radius: 10px;
+}
+
+@mixin menu-item {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 30px;
+  width: 30px;
+}
+
+@mixin mobile-screen {
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+@mixin wide-screen {
+  @media (min-width: 1370px) {
+    margin: 0 auto;
+    max-width: 1370px;
+  }
+}

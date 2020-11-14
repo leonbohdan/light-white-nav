@@ -1,7 +1,22 @@
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "header";
+@import "nav";
+@import "burger-menu";
 
 body {
-  background: $c-gray;
+  background: $bgc-gray;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.is-logout {
+  display: none;
+}
+
+.is-login {
+  display: none;
 }
