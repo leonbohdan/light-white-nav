@@ -1,0 +1,24 @@
+.burger-menu {
+  &__item {
+    position: relative;
+    display: block;
+  }
+
+  &__item::before {
+    position: absolute;
+    content: "";
+    top: -6px;
+  }
+
+  &__item::after {
+    position: absolute;
+    content: "";
+    top: 6px;
+  }
+
+  &__item,
+  &__item::before,
+  &__item::after {
+    @include burger-item;
+  }
+}

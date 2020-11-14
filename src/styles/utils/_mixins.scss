@@ -25,3 +25,10 @@
     display: none;
   }
 }
+
+@mixin wide-screen {
+  @media (min-width: 1300px) {
+    margin: 0 auto;
+    max-width: 1300px;
+  }
+}
