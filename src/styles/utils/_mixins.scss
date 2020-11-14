@@ -19,3 +19,9 @@
   height: 30px;
   width: 30px;
 }
+
+@mixin mobile-screen {
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}

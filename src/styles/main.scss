@@ -55,6 +55,7 @@ body {
   &__home {
     background-image: url(../images/home-page.png);
     @include menu-item;
+    @include mobile-screen;
   }
 
   &__write {
@@ -63,8 +64,21 @@ body {
   }
 
   &__message {
+    position: relative;
     background-image: url(../images/bell.png);
     @include menu-item;
+
+    &--counter {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background-image: url(../images/circled-3-50.png);
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 15px;
+      width: 15px;
+    }
   }
 
   &__login {
@@ -81,13 +95,16 @@ body {
       width: 20px;
     }
 
+    &--img {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+    }
+
     &--name {
       display: inline-block;
       margin-left: 5px;
-
-      @media (max-width: 1023px) {
-        display: none;
-      }
+      @include mobile-screen;
     }
   }
 
