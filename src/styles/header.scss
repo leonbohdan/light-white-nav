@@ -3,7 +3,6 @@
   height: $desktop-nav-height;
 
   &__container {
-    margin: 0 15px;
     @include wide-screen;
   }
 
