@@ -3,5 +3,27 @@
 @import "typography";
 
 body {
-  background: $c-gray;
+  background: $bgc-gray;
+}
+
+.header {
+  background-color: $bgc-nav-color;
+  height: $desktop-nav-height;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $desktop-nav-height;
+    margin: 0 20px;
+
+    &__start {
+    }
+
+    &__end {
+    }
+
+    &__item {
+    }
+  }
 }
