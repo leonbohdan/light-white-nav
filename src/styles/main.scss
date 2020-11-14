@@ -42,8 +42,53 @@ body {
     }
   }
 
+  &__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__end {
     //
+  }
+
+  &__home {
+    background-image: url(../images/home-page.png);
+    @include menu-item;
+  }
+
+  &__write {
+    background-image: url(../images/pencil.png);
+    @include menu-item;
+  }
+
+  &__message {
+    background-image: url(../images/bell.png);
+    @include menu-item;
+  }
+
+  &__login {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &--logo {
+      display: inline-block;
+      background-image: url(../images/user.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 20px;
+      width: 20px;
+    }
+
+    &--name {
+      display: inline-block;
+      margin-left: 5px;
+
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
   }
 
   &__home,
@@ -51,7 +96,9 @@ body {
   &__message,
   &__login,
   &__burger-menu {
+    margin: 0 5px;
     color: $c-text;
+    font-size: $font-sz;
   }
 
   &__burger-menu {
@@ -86,5 +133,9 @@ body {
 }
 
 .is-logout {
+  display: none;
+}
+
+.is-login {
   display: none;
 }
