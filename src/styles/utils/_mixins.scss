@@ -4,3 +4,10 @@
     #{$_property}: $_toValue;
   }
 }
+
+@mixin burger-item {
+  background-color: $c-text;
+  height: 2px;
+  width: 20px;
+  border-radius: 10px;
+}

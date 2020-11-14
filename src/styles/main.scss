@@ -6,9 +6,17 @@ body {
   background: $bgc-gray;
 }
 
+.container {
+  margin: 0 auto;
+}
+
 .header {
   background-color: $bgc-nav-color;
   height: $desktop-nav-height;
+
+  &__container {
+    margin: 0 10px;
+  }
 
   &__nav {
     display: flex;
@@ -16,17 +24,67 @@ body {
     align-items: center;
     height: $desktop-nav-height;
     margin: 0 20px;
+  }
+}
 
-    &__start {
-      //
-    }
+.nav {
+  &__start {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 
-    &__end {
-      //
-    }
-
-    &__item {
-      // 
+  &__logo {
+    &--img {
+      height: 60px;
+      width: 60px;
     }
   }
+
+  &__end {
+    //
+  }
+
+  &__home,
+  &__write,
+  &__message,
+  &__login,
+  &__burger-menu {
+    color: $c-text;
+  }
+
+  &__burger-menu {
+    display: inline-block;
+    padding: 5px;
+  }
+}
+
+.burger-menu {
+  &__item {
+    position: relative;
+    display: block;
+  }
+
+  &__item::before {
+    position: absolute;
+    content: "";
+    top: -6px;
+  }
+
+  &__item::after {
+    position: absolute;
+    content: "";
+    top: 6px;
+  }
+
+  &__item,
+  &__item::before,
+  &__item::after {
+    @include burger-item;
+  }
+}
+
+.is-logout {
+  display: none;
 }
